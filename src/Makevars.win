@@ -1,0 +1,22 @@
+## With Rcpp 0.11.0 and later, we no longer need to set PKG_LIBS as there is
+## no user-facing library. The include path to headers is already set by R.
+#PKG_LIBS = 
+
+## With R 3.1.0 or later, you can uncomment the following line to tell R to 
+## enable compilation with C++11 (or even C++14) where available
+#CXX_STD = CXX11
+
+#CXX_STD = CXX11
+
+## Path settings for MOSEK and Eigen on Windows
+# Modify the paths according to the actual installation directories
+
+# Use Windows specific paths
+#PKG_CPPFLAGS = -I$(MOSEK_HOME)\tools\platform\win64x86\h
+#PKG_LIBS = $(MOSEK_HOME)\tools\platform\win64x86\bin\fusion64.lib $(MOSEKHOME)\tools\platform\win64x86\bin\mosek64.lib
+
+
+CXX_STD = CXX11
+
+PKG_CPPFLAGS = -I$(MOSEK_HOME)\h
+PKG_LIBS = $(MOSEK_HOME)\bin\fusion64.lib $(MOSEK_HOME)\bin\mosek64.lib
